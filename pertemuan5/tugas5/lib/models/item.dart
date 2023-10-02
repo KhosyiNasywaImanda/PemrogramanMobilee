@@ -1,8 +1,9 @@
 class Item {
   String name;
   String quantity;
-  int price;
+  String price;
+  String image;
 
 
-  Item({required this.name, required this.price , required this.quantity });
+  Item({required this.name, required this.price , required this.quantity , required this.image });
 }

@@ -60,7 +60,7 @@ class HomeState extends State<Home> {
     );
   }
 
-  Future<Item> navigateToEntryForm(BuildContext context, Item item) async {
+  Future<Item?> navigateToEntryForm(BuildContext context, Item item) async {
     var result = await Navigator.push(context,
         MaterialPageRoute(builder: (BuildContext context) {
       return EntryForm(item);
@@ -89,13 +89,22 @@ class HomeState extends State<Home> {
             trailing: GestureDetector(
               child: Icon(Icons.delete),
               onTap: () async {
-                await dbHelper.delete(itemList[index].id!);
+                  int result = await  dbHelper.delete(itemList[index].id!);
+                  if (result > 0) {
+                    updateListView();
+                  }
                 //TODO 3 Panggil Fungsi untuk Delete dari DB berdasarkan Item
               },
             ),
             onTap: () async {
               var item =
                   await navigateToEntryForm(context, this.itemList[index]);
+                  if (item != null){
+                    int result = await  dbHelper.update(item);
+                  if (result > 0) {
+                    updateListView();
+                  }
+                  }  
               //TODO 4 Panggil Fungsi untuk Edit data
             },
           ),

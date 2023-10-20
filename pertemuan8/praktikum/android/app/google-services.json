@@ -1,0 +1,29 @@
+{
+    "project_info": {
+      "project_number": "877856106373",
+      "project_id": "flutterfirebase-5ccf9",
+      "storage_bucket": "flutterfirebase-5ccf9.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:877856106373:android:43dc1c0447d3ae785a46ec",
+          "android_client_info": {
+            "package_name": "pertemuan8.firebase"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCQllt4huNhDeucNQxxvFeTo1A3mI8FECs"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
